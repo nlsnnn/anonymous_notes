@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+    <title>Notes</title>
+</head>
+<body>
+    <div class="container">
+        <div class="info">
+            <h1>Anonymous Notes</h1>
+            <h3>Write and read</h3>
+        </div>
+        <div class="add-note">
+            <h2>Write your note</h2>
+            <form method="post">
+                <label>Name</label>
+                <input type="text" name="name" id="name">
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <div class="get-note">
+            <h2>Get note by ID</h2>
+            <form method="post">
+                <label for="idp">ID</label>
+                <input type="text" name="idp" id="idp">
+                <button type="submit">Get</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="src/main.js"></script>
+</body>
+</html>
