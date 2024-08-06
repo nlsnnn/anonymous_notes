@@ -1,3 +1,9 @@
 from django.db import models
 
-# Create your models here.
+
+class Note(models.Model):
+    num = models.CharField(verbose_name='ID', max_length=36, blank=True, null=True, unique=True)
+    text = models.TextField(verbose_name='Текст')
+    author = models.CharField(verbose_name='Автор', max_length=20)
+    readed = models.BooleanField(verbose_name='Прочитано')
+    time_create = models.DateField(auto_now_add=True, verbose_name='Время создания')
