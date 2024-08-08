@@ -14,21 +14,33 @@
         </div>
         <div class="add-note">
             <h2>Write your note</h2>
-            <form action="http://127.0.0.1:8000/api/notes/" method="post">
+            <form onsubmit="sendNote(event)">
                 <label>Name</label>
                 <input type="text" name="author" id="author">
                 <label>Text</label>
                 <textarea name="text" id="text"></textarea>
-                <button type="submit">Send</button>
+                <button type="submit" name="send">Send</button>
             </form>
+            <div class="add-result">
+            </div>
         </div>
         <div class="get-note">
             <h2>Get note by ID</h2>
-            <form action="http://127.0.0.1:8000/api/notes/" method="get">
+            <form onsubmit="getNote(event)">
                 <label for="idp">ID</label>
                 <input type="text" name="idp" id="idp">
-                <button type="submit">Get</button>
+                <button type="submit" name="get">Get</button>
             </form>
+            <div class="get-result">
+            </div>
+        </div>
+        <div class="note">
+            <div class="note_info">
+                <div class="note__author">
+                </div>
+                <div class="note__time"></div>
+            </div>
+            <div class="note__text"></div>
         </div>
     </div>
 
