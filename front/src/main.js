@@ -55,6 +55,7 @@ async function getNote(event) {
     const formSendResult = document.querySelector('.get-result')
     formSendResult.textContent = '';
 
+    const note = document.querySelector('.note')
     const noteAuthor = document.querySelector('.note__author')
     const noteTime = document.querySelector('.note__time')
     const noteText = document.querySelector('.note__text')
@@ -72,8 +73,10 @@ async function getNote(event) {
             console.log(data)
 
             if (data.detail){
+                info.style.display = "block";
                 info.textContent = data.detail
             } else{
+                note.style.display = "flex";
                 noteAuthor.textContent = `Author: ${data.author}`
                 noteTime.textContent = `Time: ${data.time}`
                 noteText.textContent = `${data.text}`

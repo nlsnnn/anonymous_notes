@@ -15,33 +15,38 @@
         <div class="add-note">
             <h2>Write your note</h2>
             <form onsubmit="sendNote(event)">
-                <label>Name</label>
-                <input type="text" name="author" id="author">
-                <label>Text</label>
-                <textarea name="text" id="text"></textarea>
+                <div class="form__name">
+                    <label>Name</label>
+                    <input type="text" name="author" id="author" required>
+                </div>
+                <div class="form__text">
+                    <label>Text</label>
+                    <textarea name="text" id="text" cols="35" rows="3" maxlength="180" required></textarea>
+                </div>
                 <button type="submit" name="send">Send</button>
             </form>
             <div class="add-result">
             </div>
         </div>
+        <div class="note">
+            <div class="note_info">
+                <div class="note__author"></div>
+                <div class="note__time"></div>
+            </div>
+            <div class="note__text"></div>
+        </div>
+        <div class="messages"></div>
         <div class="get-note">
             <h2>Get note by ID</h2>
             <form onsubmit="getNote(event)">
-                <label for="idp">ID</label>
-                <input type="text" name="idp" id="idp">
+                <div class="form__name">
+                    <label for="idp">ID</label>
+                    <input type="text" name="idp" id="idp" required>
+                </div>
                 <button type="submit" name="get">Get</button>
             </form>
             <div class="get-result">
             </div>
-        </div>
-        <div class="note">
-            <div class="note_info">
-                <div class="note__author">
-                </div>
-                <div class="note__time"></div>
-            </div>
-            <div class="note__text"></div>
-            <div class="messages"></div>
         </div>
     </div>
 

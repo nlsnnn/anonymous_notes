@@ -11,7 +11,7 @@ from .serializers import NoteSerializer
 class NoteView(ModelViewSet):
     queryset = Note.objects.all()
     serializer_class = NoteSerializer
-    permission_classes = [IsAdminUser]
+    # permission_classes = [IsAdminUser]
 
 
 class NoteNumView(RetrieveAPIView):
